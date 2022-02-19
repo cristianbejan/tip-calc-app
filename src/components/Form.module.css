@@ -1,0 +1,107 @@
+.container {
+  width: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.card {
+  max-width: 680px;
+  height: auto;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.left__card {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 2rem;
+  color: #00494d;
+}
+
+.left__card .dollar {
+  background: url("../components/Images/icon-dollar.svg") no-repeat left;
+}
+
+.left__card .person {
+  background: url("../components/Images/icon-person.svg") no-repeat left;
+}
+
+.right__card {
+  width: 50%;
+  height: 100%;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.right__card .result {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.right__card .result .amount {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.right__card .result .total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.right__card .result .description {
+  color: hsl(0, 0%, 100%);
+}
+
+.right__card .result .person {
+  color: hsl(186, 14%, 43%);
+}
+
+.right__card .result h1 {
+  color: hsl(172, 67%, 45%);
+}
+
+button:disabled {
+  background-color: hsl(186, 14%, 43%);
+}
+
+@media (max-width: 501px) {
+  .container {
+    height: auto;
+    padding-top: 2rem;
+  }
+
+  .card {
+    width: auto;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 15px;
+  }
+
+  .left__card,
+  .right__card {
+    width: 100%;
+  }
+
+  .right__card .result {
+    margin-bottom: 2rem;
+  }
+}
