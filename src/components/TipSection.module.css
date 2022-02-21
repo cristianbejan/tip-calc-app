@@ -26,3 +26,8 @@ label {
   background-color: hsl(172, 67%, 45%);
   color: hsl(183, 100%, 15%);
 }
+
+.buttons button:focus {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}

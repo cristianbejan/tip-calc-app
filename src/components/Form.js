@@ -9,14 +9,6 @@ import Button from "./Button";
 const Form = () => {
   const [billAmount, setBillAmount] = useState("");
   const [tipPercent, setTipPercent] = useState("");
-  // const [tipPercent, setTipPercent] = useState({
-  //   five: 5,
-  //   ten: 10,
-  //   fiftheen: 15,
-  //   twentyfive: 25,
-  //   fifty: 50,
-  //   custom: "",
-  // });
   const [peopleNumber, setPeopleNumber] = useState("");
   const [tipAmount, setTipAmount] = useState("0.00");
   const [totalAmount, setTotalAmount] = useState("0.00");
@@ -27,10 +19,6 @@ const Form = () => {
   };
 
   const tipPercentHandler = (event) => {
-    // const value = event.target.value;
-    // setTipPercent({ ...tipPercent, [event.target.name]: value });
-    // console.log(value);
-    // console.log("tip percent: ", tipPercent);
     setTipPercent(event.target.value);
   };
 
@@ -43,9 +31,6 @@ const Form = () => {
 
     const tip = (billAmount * (tipPercent / 100)) / peopleNumber;
     const total = billAmount / peopleNumber + tip;
-
-    const values = { billAmount, tipPercent, peopleNumber };
-    console.log("values: ", values);
 
     setTipAmount(tip.toFixed(2));
     setTotalAmount(total.toFixed(2));
