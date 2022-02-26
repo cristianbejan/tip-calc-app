@@ -30,12 +30,16 @@
   color: #00494d;
 }
 
-.left__card .dollar {
-  background: url("../components/Images/icon-dollar.svg") no-repeat left;
+.left__card .label__error {
+  display: block;
+  font-size: small;
+  color: coral;
+  text-align: end;
+  margin-bottom: 0.5rem;
 }
 
-.left__card .person {
-  background: url("../components/Images/icon-person.svg") no-repeat left;
+.left__card .input__error {
+  border: 1px solid coral;
 }
 
 .right__card {
@@ -83,7 +87,7 @@ button:disabled {
   background-color: hsl(186, 14%, 43%);
 }
 
-@media (max-width: 501px) {
+@media (max-width: 550px) {
   .container {
     height: auto;
     padding-top: 2rem;

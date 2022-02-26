@@ -13,10 +13,16 @@ const TipSection = (props) => {
         {buttons.map((button, index) => {
           return (
             <button
+              className={
+                props.tipStatus === "default" && props.value === button
+                  ? classes.active
+                  : ""
+              }
               key={index}
               type="button"
               onClick={() => {
                 props.onChange({ target: { value: button } });
+                props.setTipStatus("default");
               }}
             >
               {button}%
@@ -28,8 +34,12 @@ const TipSection = (props) => {
           name="custom"
           type="number"
           placeholder="Custom"
-          value={props.value}
-          onChange={props.onChange}
+          min="1"
+          value={props.tipStatus === "custom" ? props.value : ""}
+          onChange={(event) => {
+            props.onChange(event);
+            props.setTipStatus("custom");
+          }}
         ></Input>
       </div>
     </section>
